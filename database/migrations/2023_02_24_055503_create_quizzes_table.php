@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->longText('description');
+            $table->boolean('status')->comment('true=publish, false=save as draft');
             $table->timestamps();
         });
     }

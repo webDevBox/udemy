@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('quiz_id')->constrained('quizzes')->onUpdate('cascade')->onDelete('cascade');
             $table->string('title');
-            $table->tinyInteger('type')->comment('0=Mandatory, 1=Optional');
+            $table->boolean('type')->comment('true=Mandatory, false=Optional');
             $table->timestamps();
         });
     }

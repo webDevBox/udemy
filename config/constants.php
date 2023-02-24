@@ -3,7 +3,7 @@
 return [
     'RESPONSE_CONSTANTS' => [
         'INVALID_PARAMETERS_CODE' => 422,
-        
+        'NOT_FOUND' => 404
     ],   
 
     'PAGINATION_CONSTANTS' => [

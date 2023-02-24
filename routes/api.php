@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuizController;
+use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\AnswerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::prefix('quiz')->group(function () {
-    Route::post('create',[QuizController::class, 'store']);
-    
-});
+Route::resource('quiz', QuizController::class);
+Route::resource('question', QuestionController::class);
+Route::resource('answer', AnswerController::class);
