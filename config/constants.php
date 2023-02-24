@@ -2,6 +2,7 @@
 
 return [
     'RESPONSE_CONSTANTS' => [
+        'INVALID_PARAMETERS_CODE' => 422,
         
     ],   
 

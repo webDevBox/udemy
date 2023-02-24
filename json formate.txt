@@ -1,0 +1,42 @@
+{
+    "title": "New Quiz",
+    "description": "This is new quiz",
+    "questions": [
+        {
+            "title": "What is your name?",
+            "type": 0,
+            "options": [
+                {
+                    "answer": "John",
+                    "status": 0
+                },
+                {
+                    "answer": "Alex",
+                    "status": 1
+                },
+                {
+                    "answer": "Roger",
+                    "status": 1
+                }
+            ]
+        },
+        {
+            "title": "What is your father name?",
+            "type": 0,
+            "options": [
+                {
+                    "answer": "John",
+                    "status": 0
+                },
+                {
+                    "answer": "Alex",
+                    "status": 1
+                },
+                {
+                    "answer": "Roger",
+                    "status": 1
+                }
+            ]
+        }
+    ]
+}
