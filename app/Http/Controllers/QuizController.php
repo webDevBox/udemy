@@ -16,7 +16,10 @@ class QuizController extends Controller
      */
     public function index()
     {
-        //
+        $data = Quiz::whereStatus(true)->get();
+        if($data->count() == 0)
+            $data = null;
+        return response()->json(ApiResponse::success($data));
     }
 
     /**
@@ -87,7 +90,10 @@ class QuizController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Quiz::whereId($id)->whereStatus(true)->first();
+        if(!isset($data))
+            $data = null;
+        return response()->json(ApiResponse::success($data));
     }
 
     /**
