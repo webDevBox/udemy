@@ -1,0 +1,14 @@
+{
+    "user_id" : 1,
+    "quiz_id" : 1,
+    "questions" : [
+        {
+            "question_id" : 1,
+            "option_id" : 4
+        },
+        {
+            "question_id" : 2,
+            "option_id" : 5
+        }
+    ]
+}
