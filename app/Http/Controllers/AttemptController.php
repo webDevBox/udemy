@@ -48,6 +48,28 @@ class AttemptController extends Controller
         }
 
         
+
+        try {
+            $quizAttempt = QuizAttempt::create([
+                'user_id' => $request->user_id,
+                'quiz_id' => $request->quiz_id
+            ]);
+            
+            $questionArray = [];
+            foreach($request->questions as $question)
+            {
+                $questionArray[]=['quiz_attempt_id' => $quizAttempt->id,
+                    'question_id' => $question['question_id'], 
+                    'question_option_id' => $question['option_id']
+                ];
+            }
+            QestionAttempt::insert($questionArray);
+            return response()->json(ApiResponse::success());
+
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+
     }
 
     /**
